@@ -6,4 +6,4 @@
 
 #the other jupyter notebooks can be explored to see how we reached those conclusions
 
-#There is also a makefile if you choose not to use the docker
+
