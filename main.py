@@ -12,11 +12,10 @@ class ReadCsv:
         '''Initialize the class with the path, list of features and the target column.
         
         :param path: str: path to the csv file
-        :param lst_features: list: list of features
+        :param lst_features: str: str of features
         :param target: str: target column
         '''
-
-        self.lst_features = lst_features
+        self.lst_features = lst_features.split(',')
         self.path = path
         self.target = target
         self.model_type = model_type
@@ -69,7 +68,7 @@ if __name__ == '__main__':
     arg = argparse.ArgumentParser()
     arg.add_argument('path', type=str,
                      help = '.data/admit.csv; .data/ebay.csv')
-    arg.add_argument('features', type=list,
+    arg.add_argument('features', type=str,
                      help = 'GPA,SAT Score,Admission Decision; seller_price,ship_price')
     arg.add_argument('target', type=str,
                      help = 'Admission Decision; ship_price')
